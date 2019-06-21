@@ -34,20 +34,12 @@ VkResult CreateDebugUtilsMessengerEXT(
 	VkDebugUtilsMessengerEXT* pDebugMessenger)
 {
 	auto func = (PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT");
-	if (func != nullptr)
-	{
+	if (func != nullptr) {
 		return func(instance, pCreateInfo, pAllocator, pDebugMessenger);
 	}
-	else
-	{
+	else {
 		return VK_ERROR_EXTENSION_NOT_PRESENT;
-	}  int width, height;
-	glfwGetFramebufferSize(window, &width, &height);
-
-	VkExtent2D actualExtent = {
-		static_cast<uint32_t>(width),
-		static_cast<uint32_t>(height)
-	};
+	}
 }
 
 void DestroyDebugUtilsMessengerEXT(
@@ -133,11 +125,10 @@ private:
 		glfwInit();
 
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
 		window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan", nullptr, nullptr);
+		glfwSetWindowUserPointer(window, this);
 		glfwSetFramebufferSizeCallback(window, framebufferResizeCallback);
-
 	}
 
 	static void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
@@ -1029,11 +1020,11 @@ private:
 	//resolution of swap chain images 
 	VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities)
 	{
-		if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max())
+		if (capabilities.currentExtent.width != std::numeric_limits<uint32_t>::max()) 
 		{
 			return capabilities.currentExtent;
 		}
-		else
+		else 
 		{
 			int width, height;
 			glfwGetFramebufferSize(window, &width, &height);
@@ -1042,8 +1033,6 @@ private:
 				static_cast<uint32_t>(width),
 				static_cast<uint32_t>(height)
 			};
-
-			VkExtent2D actualExtent = { WIDTH, HEIGHT };
 
 			actualExtent.width = std::max(capabilities.minImageExtent.width, std::min(capabilities.maxImageExtent.width, actualExtent.width));
 			actualExtent.height = std::max(capabilities.minImageExtent.height, std::min(capabilities.maxImageExtent.height, actualExtent.height));
