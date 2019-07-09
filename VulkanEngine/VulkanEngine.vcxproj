@@ -89,15 +89,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\stb-master;C:\VulkanSDK\1.1.101.0\Include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glm</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glm;C:\Users\Arturo\source\repos\VulkanEngine\Libs\stb-master;C:\Users\Arturo\source\repos\VulkanEngine\Libs\tinyobjloader;C:\VulkanSDK\1.1.101.0\Include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include\GLFW;C:\VulkanSDK\1.1.101.0\Include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glm;C:\Users\Arturo\source\repos\VulkanEngine\Libs\tinyobjloader</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\VulkanSDK\1.1.101.0\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\VulkanSDK\1.1.101.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -107,15 +107,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\stb-master;$(SolutionDir)Libs\VulkanSDK\Include;$(SolutionDir)Libs\glfw-3.2.1.bin.WIN64\include;$(SolutionDir)Libs\glm</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\glm;$(SolutionDir)Libs\glfw-3.2.1.bin.WIN64\include;$(SolutionDir)Libs\stb-master;$(SolutionDir)Libs\tinyobjloader;C:\VulkanSDK\1.1.101.0\Include\vulkan;C:\Users\Arturo\source\repos\VulkanEngine\Libs\VulkanSDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;$(SolutionDir)Libs\VulkanSDK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.1.101.0\Lib;$(SolutionDir)Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\Arturo\source\repos\VulkanEngine\Libs\VulkanSDK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\stb-master;C:\VulkanSDK\1.1.101.0\Include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glm</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glm;C:\Users\Arturo\source\repos\VulkanEngine\Libs\stb-master;C:\Users\Arturo\source\repos\VulkanEngine\Libs\tinyobjloader;C:\VulkanSDK\1.1.101.0\Include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include\GLFW;C:\VulkanSDK\1.1.101.0\Include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,9 +135,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\VulkanSDK\1.1.101.0\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\VulkanSDK\1.1.101.0\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -149,7 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\stb-master;C:\VulkanSDK\1.1.101.0\Include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\include;C:\Users\Arturo\source\repos\VulkanEngine\Libs\glm</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libs\glm;$(SolutionDir)Libs\glfw-3.2.1.bin.WIN64\include;$(SolutionDir)Libs\stb-master;$(SolutionDir)Libs\tinyobjloader;C:\VulkanSDK\1.1.101.0\Include\vulkan;C:\Users\Arturo\source\repos\VulkanEngine\Libs\VulkanSDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,9 +157,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\Arturo\source\repos\VulkanEngine\Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\VulkanSDK\1.1.101.0\Lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.1.101.0\Lib;$(SolutionDir)Libs\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\Arturo\source\repos\VulkanEngine\Libs\VulkanSDK\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
